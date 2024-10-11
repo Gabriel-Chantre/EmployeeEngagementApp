@@ -1,0 +1,8 @@
+<ListView [items]="knowledgebaseItems" class="list-group">
+  <ng-template let-item="item">
+    <StackLayout class="list-group-item" (tap)="openSharePointPage(item)">
+      <Label [text]="item.title" class="h2"></Label>
+      <Label [text]="item.description" class="body"></Label>
+    </StackLayout>
+  </ng-template>
+</ListView>

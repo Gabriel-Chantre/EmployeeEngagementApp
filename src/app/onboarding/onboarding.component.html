@@ -1,0 +1,6 @@
+<StackLayout class="p-20">
+  <YoutubePlayer id="onboardingVideo" src="https://www.youtube.com/watch?v=your-video-id" height="200" autoplay="false"></YoutubePlayer>
+  <Label [text]="questions[currentQuestion]" class="h2 text-center my-4"></Label>
+  <TextField class="input input-rounded p-10 m-10"></TextField>
+  <Button text="Next" (tap)="nextQuestion()" class="btn btn-primary"></Button>
+</StackLayout>

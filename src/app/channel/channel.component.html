@@ -1,0 +1,8 @@
+<ListView [items]="channels" class="list-group">
+  <ng-template let-channel="item">
+    <StackLayout class="list-group-item" (tap)="openTeamsChannel(channel)">
+      <Label [text]="channel.name" class="h2"></Label>
+      <Label [text]="channel.description" class="body"></Label>
+    </StackLayout>
+  </ng-template>
+</ListView>

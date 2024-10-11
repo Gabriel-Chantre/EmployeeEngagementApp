@@ -1,0 +1,16 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Image [src]="user.photoUrl" class="w-32 h-32 rounded-full mb-4"></Image>
+    <TextField [(ngModel)]="user.name" hint="Name" class="input"></TextField>
+    <TextField [(ngModel)]="user.email" hint="Email" class="input"></TextField>
+    <TextField [(ngModel)]="user.phone" hint="Phone" class="input"></TextField>
+    <Label text="Certifications" class="h2 mt-4 mb-2"></Label>
+    <ListView [items]="user.certifications" class="list-group">
+      <ng-template let-item="item">
+        <Label [text]="item" class="list-group-item"></Label>
+      </ng-template>
+    </ListView>
+    <Button text="Add Certification" class="btn btn-outline mt-2"></Button>
+    <Button text="Save Changes" (tap)="saveChanges()" class="btn btn-primary mt-4"></Button>
+  </StackLayout>
+</ScrollView>
